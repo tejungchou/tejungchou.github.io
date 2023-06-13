@@ -1,13 +1,10 @@
 import React from 'react';
 import { Animation } from '../../node_modules/gatsby-theme-portfolio-minimal/src/components/Animation';
 import { Section } from 'gatsby-theme-portfolio-minimal';
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
-import { useLocalDataSource } from './photodata';
+import { StaticImage } from "gatsby-plugin-image";
 import { PageSection } from '../../node_modules/gatsby-theme-portfolio-minimal/src/types';
 
 export default function PhotoPage(props: PageSection): React.ReactElement {
-    const response = useLocalDataSource();
-    const data = response.allImageSharp;
     const wrap = {
         'display': 'flex',
         'flex-direction': 'row',
@@ -17,7 +14,6 @@ export default function PhotoPage(props: PageSection): React.ReactElement {
     const photoStyle = {
         'padding': '5px',
     };
-    console.log(data);
     return (
         <Animation type="fadeUp">
             <Section anchor={props.sectionId} heading={props.heading}>
