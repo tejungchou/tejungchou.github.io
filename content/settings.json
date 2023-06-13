@@ -3,27 +3,27 @@
     "language": "en",
     "siteUrl": "https://gatsby-starter-portfolio-minimal-theme.netlify.app/",
     "title": "Gatsby Starter for Portfolio Minimal",
-    "titleTemplate": "%s · Portfolio Minimal",
-    "description": "A Gatsby Starter Project to easily get started with Portfolio Minimal theme.",
-    "author": "Konstantin Münster",
+    "titleTemplate": "%s · Roger Chou",
+    "description": "Roger Chou's personal website.",
+    "author": "Roger Chou",
     "avatar": "../content/images/gatsby.png",
     "bio": "This biography will be used in the footer area of an article and can contain some more details about the author.",
     "social": {
-      "behance": "https://behance.com",
-      "github": "https://github.com/konstantinmuenster",
-      "medium": "https://konstantinmuenster.medium.com",
-      "linkedin": "https://www.linkedin.com/in/konstantin-muenster/",
-      "mail": "mailto:mail@konstantin.digital"
+      "instagram": "https://www.instagram.com/de_ron13/",
+      "github": "https://github.com/tejungchou",
+      "medium": "https://medium.com",
+      "linkedin": "https://www.linkedin.com/in/roger-chou/",
+      "mail": "mailto:roger04130413@gmail.com"
     }
   },
   "siteConfiguration": {
-    "logo": { "text": "Portfolio" },
+    "logo": { "text": "Roger Chou"},
     "navigation": {
       "header": [
         { "label": "About", "url": "/#about" },
-        { "label": "Blog", "url": "/blog" },
-        { "label": "Features", "url": "/#features" },
-        { "label": "Github", "url": "/#github" }
+        { "label": "Projects", "url": "/#features" },
+        { "label": "Photography", "url": "/#photography" },
+        { "label": "Info", "url": "/#info" }
       ],
       "ctaButton": {
         "openNewTab": true,
@@ -31,8 +31,6 @@
         "url": "/resume.pdf"
       },
       "footer": [
-        { "label": "Privacy", "url": "/privacy" },
-        { "label": "Imprint", "url": "/imprint" }
       ]
     },
     "featureToggles": {

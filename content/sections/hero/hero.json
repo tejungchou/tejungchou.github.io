@@ -1,22 +1,22 @@
 {
-  "intro": "Hej",
+  "intro": "Hi",
   "heroPhoto": {
-    "src": "../../images/lego-dummy.png",
+    "src": "../../images/head_pic.png",
     "alt": "My Photo"
   },
   "image": {
     "src": "../../images/waving-hand.png",
     "alt": "Waving Hand Emoji"
   },
-  "title": "I'm a Gatsby Starter",
+  "title": "I'm Roger Chou",
   "subtitle": {
-    "prefix": "I do all the setup ",
-    "highlight": "for you",
-    "suffix": "."
+    "prefix": "",
+    "highlight": "",
+    "suffix": ""
   },
-  "description": "A Gatsby Starter Project to easily get started with Portfolio Minimal theme.",
+  "description": "I'm a full-stack software engineer with a passion for photography. Balancing my professional skills with creative pursuits, I capture moments through my lens during my free time.",
   "socialProfiles": {
-    "from": ["LinkedIn", "Medium", "Github", "Mail"],
+    "from": ["LinkedIn", "Instagram", "Github", "Mail"],
     "showIcons": false
   }
 }

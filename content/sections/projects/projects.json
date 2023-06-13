@@ -2,40 +2,45 @@
   "projects": [
     {
       "visible": true,
-      "category": "🕹️ EASY AND QUICK SETUP",
-      "title": "Add content and deploy!",
-      "description": "Get up and running within minutes. Just install the starter, add your content, deploy it, and there you go! This starter works seamlessly with hosts like Netlify. Photo by Clément H on Unsplash.",
-      "tags": ["Content Integration", "Ready-2-Deploy"],
+      "category": "🕹️ BUILD YOUR OWN MEMES!",
+      "title": "Meme Generator",
+      "description": "Get ready for an exhilarating experience on this website powered by ReactJS! It offers an incredibly entertaining way to create hilarious memes using a remote API that generates a plethora of random templates. Add your personal touch by customizing the text, whether it's at the top or bottom of the meme. Get ready to unleash your creativity and let the laughter begin!",
+      "tags": ["UX/UI", "React.js","Random Memes","API"],
       "image": {
-        "src": "../../images/clement-h-95YRwf6CNw8-unsplash.jpg",
-        "alt": "Quick Setup",
-        "linkTo": "https://github.com/konstantinmuenster/gatsby-starter-portfolio-minimal-theme"
+        "src": "../../images/meme.jpeg",
+        "alt": "Meme Generator",
+        "linkTo": "https://tejungchou.github.io/Meme-Generator/"
       },
       "links": [
         {
           "type": "github",
-          "url": "https://github.com/konstantinmuenster/gatsby-starter-portfolio-minimal-theme"
+          "url": "https://github.com/tejungchou/Meme-Generator"
         },
         {
           "type": "external",
-          "url": "https://www.gatsbyjs.org/docs/mdx/writing-pages/"
+          "url": "https://tejungchou.github.io/Meme-Generator/"
         }
       ]
     },
     {
       "visible": true,
-      "category": "🧰 EXTENDABLE LAYOUT",
-      "title": "Add more sections!",
-      "description": "The starter includes predefined sections as well as a template for new, custom sections. Moreover, you can add new projects to this section without additional coding. Photo by Kelly Sikkema on Unsplash.",
-      "tags": ["Custom Sections", "Easy-2-Use"],
+      "category": "🔊 ANYONE CAN BECOME A DJ!",
+      "title": "Digital Audio Sampler",
+      "description": "Embark on an exciting journey with this intuitive digital audio sampler project, where Python programming, digital signal processing, and a diverse array of 11 dynamic sound effects come together. Explore endless possibilities to effortlessly manipulate, transform, and create audio, all while tapping into your inner DJ. Get ready to dive into a world of creativity and boundless potential.",
+      "tags": ["Python","Digital Signal Processing","Sound Effects"],
       "image": {
-        "src": "../../images/kelly-sikkema-Hl3LUdyKRic-unsplash.jpg",
-        "alt": "Extendable Layout"
+        "src": "../../images/sampler.png",
+        "alt": "Extendable Layout",
+        "linkTo": "https://www.youtube.com/watch?v=IB4QkUC1HZQ&t=2s"
       },
       "links": [
         {
           "type": "github",
-          "url": "https://github.com/konstantinmuenster/gatsby-starter-portfolio-minimal-theme"
+          "url": "https://github.com/tejungchou/Audio_Sampler"
+        },
+        {
+          "type":"external",
+          "url": "https://www.youtube.com/watch?v=IB4QkUC1HZQ"
         }
       ]
     }
@@ -43,6 +48,6 @@
   "button": {
     "visible": true,
     "label": "Visit on Github",
-    "url": "https://github.com/konstantinmuenster/gatsby-theme-portfolio-minimal"
+    "url": "https://github.com/tejungchou"
   }
 }
