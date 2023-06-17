@@ -1,15 +1,15 @@
 module.exports = {
-  // pathPrefix: "/portfolio",
+  pathPrefix: "/portfolio",
   plugins: [
     {
       resolve: "gatsby-theme-portfolio-minimal",
       options: {
-        siteUrl: "https://www.rogerchou.com/portfolio", // Used for sitemap generation
+        siteUrl: "https://www.rogerchou.com", // Used for sitemap generation
         manifestSettings: {
           favicon: "./content/images/favicon.png", // Path is relative to the root
           siteName: "My Minimal Portfolio", // Used in manifest.json
           shortName: "Portfolio", // Used in manifest.json
-          startUrl: "/", // Used in manifest.json
+          startUrl: "/portfolio", // Used in manifest.json
           backgroundColor: "#FFFFFF", // Used in manifest.json
           themeColor: "#000000", // Used in manifest.json
           display: "minimal-ui", // Used in manifest.json
