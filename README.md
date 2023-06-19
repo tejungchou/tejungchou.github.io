@@ -1,4 +1,4 @@
-<img src="screenshot.png" alt="Roger Chou's Portfolio Screenshot" width="700" />
+<img src="https://github.com/tejungchou/tejungchou.github.io/blob/main/content/images/screenshot.png" alt="Roger Chou's Portfolio Screenshot" width="700" />
 
 # Roger Chou's Portfolio
 
