@@ -8,11 +8,14 @@ export default function PhotoPage(props: PageSection): React.ReactElement {
     const wrap = {
         'display': 'flex',
         'flex-direction': 'row',
-        'flex-wrap': 'wrap',
-        'text-align': 'center'
+        // 'flex-wrap': 'wrap',
+        'text-align': 'center',
+        'overflow-x': 'scroll'
     }
     const photoStyle = {
         'padding': '5px',
+        'min-width': '250px',
+        'min-height':'250px',
     };
     return (
         <Animation type="fadeUp">
@@ -23,81 +26,90 @@ export default function PhotoPage(props: PageSection): React.ReactElement {
                             <StaticImage 
                                 className="photo-photo"
                                 src='./images/2.jpg'
+                                layout='constrained'
                                 alt="myPhoto"
-                                width={200}
-                                height={200}
+                                width={250}
+                                height={250}
                             />
                         </div>
                         <div className='photo-style' style={photoStyle}>
                             <StaticImage 
                                 className="photo-photo"
                                 src='./images/3.jpg'
+                                layout='constrained'
                                 alt="myPhoto"
-                                width={200}
-                                height={200}
+                                width={250}
+                                height={250}
                             />
                         </div>
                         <div className='photo-style' style={photoStyle}>
                             <StaticImage 
                                 className="photo-photo"
                                 src='./images/4.jpg'
+                                layout='constrained'
                                 alt="myPhoto"
-                                width={200}
-                                height={200}
+                                width={250}
+                                height={250}
                             />
                         </div>
                         <div className='photo-style' style={photoStyle}>
                             <StaticImage 
                                 className="photo-photo"
                                 src='./images/5.jpg'
+                                layout='constrained'
                                 alt="myPhoto"
-                                width={200}
-                                height={200}
+                                width={250}
+                                height={250}
                             />
                         </div>
                         <div className='photo-style' style={photoStyle}>
                             <StaticImage 
                                 className="photo-photo"
                                 src='./images/6.jpg'
+                                layout='constrained'
                                 alt="myPhoto"
-                                width={200}
-                                height={200}
+                                width={250}
+                                height={250}
                             />
                         </div>
                         <div className='photo-style' style={photoStyle}>
                             <StaticImage 
                                 className="photo-photo"
                                 src='./images/7.jpg'
+                                layout='constrained'
                                 alt="myPhoto"
-                                width={200}
-                                height={200}
+                                width={250}
+                                height={250}
                             />
                         </div>
                         <div className='photo-style' style={photoStyle}>
                             <StaticImage 
                                 className="photo-photo"
                                 src='./images/8.jpg'
+                                layout='constrained'
                                 alt="myPhoto"
-                                width={200}
-                                height={200}
+                                width={250}
+                                height={250}
                             />
                         </div>
                         <div className='photo-style' style={photoStyle}>
                             <StaticImage 
                                 className="photo-photo"
                                 src='./images/9.jpg'
+                                layout='constrained'
                                 alt="myPhoto"
-                                width={200}
-                                height={200}
+                                width={250}
+                                height={250}
                             />
                         </div>
                         <div className='photo-style' style={photoStyle}>
                             <StaticImage 
                                 className="photo-photo"
                                 src='./images/10.jpg'
+                                layout='constrained'
                                 alt="myPhoto"
-                                width={200}
-                                height={200}
+                                width={250}
+                                height={250}
                             />
                         </div>
                     </div>
