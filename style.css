@@ -1,0 +1,147 @@
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure no horizontal overflow and consistent font/background */
+html, body {
+    overflow-x: hidden; /* Prevents horizontal scrollbar/whitespace */
+    font-family: -apple-system, BlinkMacMacSystemFont, 'Gambarino', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #fff;
+    color: #222;
+    line-height: 1.6;
+    padding: 0; /* Set body padding to 0; container handles padding */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-top: 2rem; /* Add some top padding for header */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.container {
+    max-width: 1400px; /* Maximum width for the gallery container */
+    margin: 0 auto; /* Center the container */
+    padding: 0 1rem; /* Add horizontal padding to the container itself */
+}
+
+.gallery.masonry {
+    /* Use column-width to help determine how many columns fit */
+    column-width: 280px; /* Adjusted to be slightly smaller for better 3-column fit */
+    column-count: 3;    /* Aims for 3 columns on wider screens */
+    column-gap: 1rem;
+    padding-bottom: 2rem; /* Add some space below the gallery */
+}
+
+.gallery.masonry a {
+    display: inline-block;
+    width: 100%; /* Image takes 100% of its column's width */
+    margin-bottom: 1rem; /* Space between images in a column */
+    position: relative; /* Create a stacking context for hover effect */
+    z-index: 1; /* Default z-index */
+}
+
+.gallery.masonry a:hover {
+    z-index: 10; /* Bring the hovered item to the front */
+}
+
+.gallery.masonry img {
+    width: 100%;
+    height: auto;
+    border-radius: 0; /* Makes images square by removing rounded edges */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.25s ease; /* Keep transition on img */
+    break-inside: avoid; /* Prevents images from being cut across columns */
+}
+
+.gallery.masonry img:hover {
+    transform: scale(1.03);
+    /* No z-index here; z-index is on the parent 'a' tag now */
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-bottom: 1rem; /* Add some padding below the footer text */
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Lightbox Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    /* Changed background to a light gray with 90% opacity */
+    background: rgba(240, 240, 240, 0.98);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    flex-direction: column; /* Arrange image and description vertically */
+    padding: 20px; /* Add some padding around the lightbox content */
+}
+.lightbox img {
+    max-width: 90%;
+    max-height: 70vh; /* Adjust max-height to leave room for description */
+    border-radius: 0px; /* Lightbox images can keep rounded corners if desired */
+    margin-bottom: 15px; /* Space between image and description */
+}
+.lightbox:target {
+    display: flex;
+}
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    /* Changed close button color to black */
+    color: black;
+    text-decoration: none;
+}
+
+/* Styles for the description within the lightbox */
+.lightbox-description {
+    /* Changed description color to dark gray */
+    color: #757373;
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 80%; /* Limit description width */
+    margin-top: 0;
+    padding: 0 1rem;
+    line-height: 1.4;
+}
+
+
+/* Media Queries for Responsive Column Count */
+
+/* For screens up to 1024px (e.g., tablets in landscape, smaller laptops) */
+@media (max-width: 1024px) {
+    .gallery.masonry {
+        column-count: 2; /* Show 2 columns */
+        column-width: auto; /* Let browser decide width for 2 columns */
+    }
+}
+
+/* For screens up to 768px (e.g., tablets in portrait, mobile phones) */
+@media (max-width: 768px) {
+    .gallery.masonry {
+        column-count: 1; /* Show 1 column */
+        column-width: auto;
+    }
+    .container {
+        padding: 0 0.5rem; /* Reduced padding for very small screens */
+    }
+}
