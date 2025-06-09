@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Roger Chou</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>My Gallery</title>
     <link rel="stylesheet" href="style.css" />
     </head>
 <body>
@@ -11,15 +11,55 @@
         <h1>Roger Chou</h1>
         <p class="subtitle">You might like one of these</p>
     </header>
+
     <div class="container">
-        <section class="gallery masonry">
-            <a href="#lightbox1"><img src="images/zumwalt_meadows.jpg" alt="Photo 1" loading="lazy" /></a>
-            <a href="#lightbox2"><img src="images/zumwalt_meadows2.jpg" alt="Photo 2" loading="lazy" /></a>
-            <a href="#lightbox3"><img src="images/sequoia_car.jpg" alt="Photo 3" loading="lazy" /></a>
-            <a href="#lightbox4"><img src="images/fresno.jpg" alt="Photo 4" loading="lazy" /></a>
-            <a href="#lightbox5"><img src="images/beetle_rock.jpg" alt="beetle rock" loading="lazy" /></a>
-            <a href="#lightbox6"><img src="images/santa_cruz.jpg" alt="santa cruz" loading="lazy" /></a>
-            </section>
+        <section class="gallery masonry" id="image-gallery">
+            <div class="gallery-sizer"></div>
+
+            <a href="#lightbox1" class="landscape-single">
+                <div class="image-wrapper">
+                    <img src="images/zumwalt_meadows.jpg" alt="Photo 1" loading="lazy" />
+                </div>
+            </a>
+            <a href="#lightbox2" class="landscape-single">
+                <div class="image-wrapper">
+                    <img src="images/zumwalt_meadows2.jpg" alt="Photo 2" loading="lazy" />
+                </div>
+            </a>
+            <a href="#lightbox3" class="landscape-single">
+                <div class="image-wrapper">
+                    <img src="images/sequoia_car.jpg" alt="Photo 3" loading="lazy" />
+                </div>
+            </a>
+            <a href="#lightbox4" class="landscape-single">
+                <div class="image-wrapper">
+                    <img src="images/fresno.jpg" alt="Photo 4" loading="lazy" />
+                </div>
+            </a>
+
+            <a href="#lightbox8" class="portrait">
+                <div class="image-wrapper">
+                    <img src="images/sequoia_tree.jpg" alt="sequoia tree" loading="lazy" />
+                </div>
+            </a>
+
+            <a href="#lightbox5" class="landscape-single">
+                <div class="image-wrapper">
+                    <img src="images/beetle_rock.jpg" alt="beetle rock" loading="lazy" />
+                </div>
+            </a>
+            <a href="#lightbox6" class="landscape-single">
+                <div class="image-wrapper">
+                    <img src="images/sequoia_tree2.jpg" alt="sequoia tree" loading="lazy" />
+                </div>
+            </a>
+            <a href="#lightbox7" class="landscape-single">
+                <div class="image-wrapper">
+                    <img src="images/santa_cruz.jpg" alt="santa cruz" loading="lazy" />
+                </div>
+            </a>
+
+        </section>
     </div>
 
     <div id="lightbox1" class="lightbox">
@@ -57,16 +97,67 @@
             Nikon F3<br>Ilford HP5+ @1600
         </div>
     </div>
-    <div id="lightbox6" class="lightbox">
-        <a href="#" class="lightbox-close">&times;</a>
+    <div id="lightbox6" class="lightbox"> <a href="#" class="lightbox-close">&times;</a>
+        <img src="images/sequoia_tree2.jpg" alt="sequoia tree" />
+        <div class="lightbox-description">
+            Nikon F3<br>Ilford HP5+ @1600
+        </div>
+    </div>
+    <div id="lightbox7" class="lightbox"> <a href="#" class="lightbox-close">&times;</a>
         <img src="images/santa_cruz.jpg" alt="santa cruz" />
         <div class="lightbox-description">
             Nikon F3<br>Kodak Ektar 100
+        </div>
+    </div>
+    <div id="lightbox8" class="lightbox"> <a href="#" class="lightbox-close">&times;</a>
+        <img src="images/sequoia_tree.jpg" alt="sequoia tree" />
+        <div class="lightbox-description">
+            Nikon F3<br>Ilford HP5+ @1600
         </div>
     </div>
 
     <footer>
         <p>&copy; 2025 Roger Chou</p>
     </footer>
+
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var gallery = document.querySelector('.gallery.masonry');
+            var msnry = new Masonry( gallery, {
+                itemSelector: 'a', // Select all 'a' tags within the gallery
+                columnWidth: '.gallery-sizer', // Use the sizer element to define column width
+                percentPosition: true, // Use percentage-based positioning for fluid layouts
+                gutter: 16 // Set gutter between items
+            });
+
+            // Ensure Masonry recalculates layout after images are loaded
+            imagesLoaded( gallery ).on( 'progress', function() {
+                msnry.layout();
+            });
+
+            let scrollY;
+
+            // 點圖片開啟 lightbox 前，記住當前滾動位置
+            document.querySelectorAll('.gallery.masonry a').forEach(link => {
+                link.addEventListener('click', () => {
+                    scrollY = window.scrollY;
+                });
+            });
+
+            // 關閉 lightbox 後還原滾動位置
+            document.querySelectorAll('.lightbox-close').forEach(closeBtn => {
+                closeBtn.addEventListener('click', (e) => {
+                    // 小延遲讓 hash 清除後才滾動
+                    setTimeout(() => {
+                        window.scrollTo({ top: scrollY, behavior: 'instant' });
+                    }, 1);
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
